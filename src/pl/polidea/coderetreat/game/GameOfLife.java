@@ -13,17 +13,32 @@ public class GameOfLife {
     }
 
     public GameOfLife(TYPE type) {
-        this(6);
-        matrix[1][2] = true;
-        matrix[1][3] = true;
+        this(100);
+        if (type == TYPE.LOAF) {
+            matrix[1][2] = true;
+            matrix[1][3] = true;
 
-        matrix[2][1] = true;
-        matrix[2][4] = true;
+            matrix[2][1] = true;
+            matrix[2][4] = true;
 
-        matrix[3][2] = true;
-        matrix[3][4] = true;
+            matrix[3][2] = true;
+            matrix[3][4] = true;
 
-        matrix[4][3] = true;
+            matrix[4][3] = true;
+        }  else if (type == TYPE.LWSS){
+            matrix[1][2] = true;
+            matrix[1][5] = true;
+
+            matrix[2][1] = true;
+            matrix[3][1] = true;
+            matrix[3][5] = true;
+            matrix[4][1] = true;
+            matrix[4][2] = true;
+            matrix[4][3] = true;
+            matrix[4][4] = true;
+
+        }
+
     }
 
     public int size() {

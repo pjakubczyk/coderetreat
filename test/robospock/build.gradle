@@ -1,0 +1,21 @@
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'idea'
+apply plugin: 'groovy'
+
+def projectDir = "../.."
+
+test {
+    workingDir = new File(projectDir)
+}
+
+dependencies {
+    groovy "org.codehaus.groovy:groovy-all:1.8.6"
+    compile 'pl.polidea:robospock:0.1'
+    compile "com.google.android:android:2.2.1"
+    compile files(projectDir + '/bin/classes')
+}
+
+idea.module.jdkName = '1.6'
