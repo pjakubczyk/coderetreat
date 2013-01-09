@@ -12,6 +12,20 @@ public class GameOfLife {
         }
     }
 
+    public GameOfLife(TYPE type) {
+        this(6);
+        matrix[1][2] = true;
+        matrix[1][3] = true;
+
+        matrix[2][1] = true;
+        matrix[2][4] = true;
+
+        matrix[3][2] = true;
+        matrix[3][4] = true;
+
+        matrix[4][3] = true;
+    }
+
     public int size() {
         return (matrix.length - 2) * (matrix[0].length - 2);
     }
@@ -29,4 +43,16 @@ public class GameOfLife {
         }
         return !result;
     }
+
+    public boolean get(int i, int j) {
+        return matrix[i + 1][j + 1];
+    }
+
+    public enum TYPE {
+        LOAF,
+        BLOCK,
+        GLIDER,
+        LWSS
+    }
+
 }
