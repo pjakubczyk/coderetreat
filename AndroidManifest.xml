@@ -16,7 +16,7 @@
             android:theme="@style/AppTheme"
             android:name=".TddApplication">
         <activity
-                android:name="pl.polidea.coderetreat.activity.MainActivity"
+                android:name="pl.polidea.coderetreat.activity.GameActivity"
                 android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
