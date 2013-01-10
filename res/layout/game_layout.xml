@@ -5,14 +5,11 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
 
-    <LinearLayout
+    <FrameLayout
             android:id="@+id/game_layout"
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1">
-
-    </LinearLayout>
+            android:layout_weight="1"/>
 
     <LinearLayout
             android:orientation="horizontal"
