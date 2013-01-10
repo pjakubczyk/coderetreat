@@ -17,12 +17,16 @@ public class ConwayView extends View {
 
     public void enableGame(GameOfLife game) {
         this.game = game;
-        game.proceed();
         invalidate();
     }
 
     public Integer getNumberOfCells() {
         return game.size();
+    }
+
+    public void nextStep(){
+        game.proceed();
+        invalidate();
     }
 
     Paint paint = new Paint();
