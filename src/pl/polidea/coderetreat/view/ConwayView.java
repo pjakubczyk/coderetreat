@@ -17,7 +17,6 @@ public class ConwayView extends View {
 
     public void enableGame(GameOfLife game) {
         this.game = game;
-        invalidate();
     }
 
     public Integer getNumberOfCells() {

@@ -40,6 +40,7 @@ class ConwayViewSpecification extends RoboSpecification {
 
         when:
         conwayView.enableGame(Mock(GameOfLife))
+        conwayView.invalidate()
         ShadowConwayCanvas canvas = Robolectric.shadowOf(((ShadowConwayView)Robolectric.shadowOf(conwayView)).canvas)
 
         then:
